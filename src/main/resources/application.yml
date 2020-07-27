@@ -1,0 +1,47 @@
+server:
+  address: 127.0.0.1
+  port: 8080
+
+
+# @Value("${xxx:-1}") -> String[]
+xxx: a,b,c
+
+# @Value("#{'${yyy:-1}'.split(',')}") ->List<String>
+yyy: 1,2,3
+
+# @Value("#{${maps}}")
+maps: "{key1:'value1',key2:'value2'}"
+
+# 错误
+lists: "aaa,bbb,ccc"
+
+# @Value(#{${listsV2}})
+listsV2: "{'aaa','bbb','ccc'}"
+
+test:
+  port: {80}
+  str: "中文 \r\n"
+  strV2: '中文 \r\n'
+  strV3: 中文 \\r\\n
+
+#
+#@Data
+#@Configuration
+#@ConfigurationProperties(prefix = "person")
+person:
+  last-name: hello
+  age: 20
+  boss: true
+  birth: 2018/03/18
+  maps: {k1: 'v1', k2: '12'}
+  mapsV2:
+    k1: 'v1'
+    k2: '12'
+  lists: ['123', '11312']
+  listsV2:
+    - '123'
+    - 'asasaa'
+  dog:
+    name: dog
+    age: 12
+

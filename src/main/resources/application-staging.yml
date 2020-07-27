@@ -1,0 +1,10 @@
+server:
+  address:127.0.0.1
+  port=8080
+
+xxx:a,b,c
+yyy:1,2,3
+
+test:
+  port:{port:80}
+
