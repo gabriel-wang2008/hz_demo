@@ -4,7 +4,7 @@ server:
 
 
 # @Value("${xxx:-1}") -> String[]
-xxx: a,b,c
+xxx: a,b,cd
 
 # @Value("#{'${yyy:-1}'.split(',')}") ->List<String>
 yyy: 1,2,3
