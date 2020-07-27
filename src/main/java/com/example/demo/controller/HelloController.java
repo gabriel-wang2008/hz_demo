@@ -20,9 +20,9 @@ import java.util.Map;
 @RestController
 @RequestMapping("/demo.do")
 public class HelloController {
-    @Value("${server.address}")
+//    @Value("${server.address}")
     private String address;
-    @Value("${server.port}")
+//    @Value("${server.port}")
     private String port;
     @Autowired
     private IViewObject viewObject;

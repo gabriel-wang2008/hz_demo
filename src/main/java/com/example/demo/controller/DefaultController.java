@@ -26,10 +26,10 @@ import java.util.stream.Stream;
 @RestController
 @RequestMapping("index")
 public class DefaultController {
-    @Value("${server.address}")
-    private String address;
-    @Value("${server.port}")
-    private String port;
+//    @Value("${server.address}")
+//    private String address;
+//    @Value("${server.port}")
+//    private String port;
 
     @Value("${xxx:-1}")
     private String[] xxx;
