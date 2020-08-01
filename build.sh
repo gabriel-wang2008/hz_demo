@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 JAR_NAME=demo-0.0.1-SNAPSHOT.jar
 IMAGE_NAME=JAR_NAME=hub.test.com:5000/demo-0.0.1-SNAPSHOT
 VERSION_ID=1.0
@@ -15,7 +16,7 @@ docker build --build-arg jar_name=${JAR_NAME} -t ${IMAGE_NAME}:${VERSION_ID} .
 new_image_id=`docker images|grep ${IMAGE_NAME}|grep ${VERSION_ID}|awk '{print $3}'`
 
 # 根据生成的镜像，tag出一个名称空间不同的镜像（腾讯云能识别的镜像）
-sudo docker tag ${new_image_id} ${IMAGE_NAME}:${VERSION_ID}
+docker tag ${new_image_id} ${IMAGE_NAME}:${VERSION_ID}
 
 # 将镜像仓库能够试别的镜像推送到仓库
-sudo docker push ${IMAGE_NAME}:${VERSION_ID}
+docker push ${IMAGE_NAME}:${VERSION_ID}
