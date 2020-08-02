@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 JAR_NAME=demo-0.0.1-SNAPSHOT.jar
-IMAGE_NAME=hub.test.com:5000/demo-0.0.1-SNAPSHOT
+IMAGE_NAME=hub.test.com:5000/demo-0.0.1
 VERSION_ID=1.0
 
-echo JAR_NAME
-echo IMAGE_NAME
-echo VERSION_ID
+echo $JAR_NAME
+echo ${IMAGE_NAME}
+echo ${VERSION_ID:-1.0}
 # 获取已经存在的镜像
 ole_image_id=`docker images|grep ${IMAGE_NAME}|grep ${VERSION_ID}|awk '{print $3}'`
 # 删掉存在的镜像
