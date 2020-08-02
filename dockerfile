@@ -13,7 +13,7 @@ RUN echo "这是一个jar_name: ${jar_name}"
 run mkdir /worker
 
 #将jar文件复制到工作目录中
-add ${jar_name} /worker
+add target/${jar_name} /worker
 
 #暴露镜像的端口8452，其他端口不开放
 expose 9090
