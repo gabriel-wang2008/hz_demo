@@ -8,6 +8,7 @@ ARG jar_name
 
 ENV jar_name_evn = ${jar_name}
 
+RUN echo "这是一个jar_name: ${jar_name}"
 #在镜像中创建一个工作目录
 run mkdir /worker
 
