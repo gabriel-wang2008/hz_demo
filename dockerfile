@@ -5,7 +5,7 @@ FROM hub.test.com:5000/openjdk:1.0
 #也可以在这里直接配置　ARG JAR_FILE=/target/web-1.0.jar
 #用于配置spingboot应用maven打包生成的jar文件
 ARG jar_name
-echo ${jar_name}
+
 ENV jar_name_evn = ${jar_name}
 
 #在镜像中创建一个工作目录
